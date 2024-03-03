@@ -19,6 +19,10 @@
    - Uploading files to **Cloudinary**
    - Setup Multer Middleware : [Multer](https://github.com/expressjs/multer) (Other package: `express-fileupload`)
 
+## HTTP
+![HTTP Methods](image-1.png)
+![HTTP Status Code](image.png)
+
 ## Project Logic
 1. Routes
 2. Controllers
