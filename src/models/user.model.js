@@ -52,7 +52,7 @@ const userSchema = new Schema(
 // using middlewares (hooks)
 userSchema.pre("save", async function (next) {
   if (!this.isModified("password")) next(); // if not changed, no need to re-hash
-  this.password = bcrypt.hash(this.password, 10);
+  this.password = await bcrypt.hash(this.password, 10);
   next();
 });
 

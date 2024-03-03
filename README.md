@@ -25,6 +25,8 @@
 
 ## Project Logic
 1. Routes
+   - Use standard practices to write APIs, eg: `/api/v1/users`
+   - 
 2. Controllers
 3. Authentication
 4. Pipelines
