@@ -1,7 +1,6 @@
-# Backend for Video Streaming
+# Backend Workflow for Video Streaming
 
-#### Workflow
-
+## Project Setup
 1. Create database relation diagram ([Click Here](https://app.eraser.io/workspace/YtPqZ1VogxGy1jzIDkzj))
 2. Add devDependencies : `npm i -D prettier` & `npm i -D nodemon`
 3. Connect Database - MongoDB for this project
@@ -15,5 +14,13 @@
    - Mongoose Methods - custom methods (like pre-built updateOne, deleteOne)
    - JWT - bearer token (like a key, whoever posseses gets access) [Read More](https://github.com/auth0/node-jsonwebtoken)
    - Access Token and Refresh Token
-7. 
+7. Handling Files
+   - Done using third party services - AWS, Cloudinary, etc.
+   - Uploading files to **Cloudinary**
+   - Setup Multer Middleware : [Multer](https://github.com/expressjs/multer) (Other package: `express-fileupload`)
 
+## Project Logic
+1. Routes
+2. Controllers
+3. Authentication
+4. Pipelines
