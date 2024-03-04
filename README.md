@@ -34,4 +34,5 @@
    - database operations must have `await` and wrap in try-catch
 3. Authentication
    - middleware - required multiple times
+   - when accessToken expires, can fetch refreshToken from DB and regenerate accessToken without troubling user
 4. Pipelines
