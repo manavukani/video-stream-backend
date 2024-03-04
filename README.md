@@ -26,8 +26,12 @@
 ## Project Logic
 1. Routes
    - Use standard practices to write APIs, eg: `/api/v1/users`
+   - Routes and App Router
 2. Controllers
    - logic building (user data fetch, validate, create, verify)
-   - using utils
+   - using utils (asyncHandler, ApiError, ApiResponse, etc)
+   - sending cookies
+   - database operations must have `await` and wrap in try-catch
 3. Authentication
+   - middleware - required multiple times
 4. Pipelines
