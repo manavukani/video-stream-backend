@@ -42,6 +42,16 @@
    - database operations must have `await` and wrap in try-catch
    - mongodb operators like or, set, unset, etc...
    - middlewares help fetch data and provides it in `req`
+   - subscription
+      - model: subscriber, channel
+      - eg:
+         - [subscriber: A, channel: XYZ]
+         - [subscriber: A, channel: DEF]
+         - [subscriber: B, channel: XYZ]
+         - [subscriber: C, channel: XYZ]
+         - [subscriber: C, chennel: DEF]
+      - count subs : count the docs with "XYZ" channel
+      - count my subscriptions : count the docs with "A" subscriber
 3. Authentication
    - middleware - when required multiple times
    - generateAccessAndRefreshTokens, refreshAccessToken
