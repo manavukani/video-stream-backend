@@ -1,6 +1,7 @@
 # Backend Workflow for Video Streaming
 
 ## Project Setup
+
 1. Create database relation diagram ([Click Here](https://app.eraser.io/workspace/YtPqZ1VogxGy1jzIDkzj))
 2. Add devDependencies : `npm i -D prettier` & `npm i -D nodemon`
 3. Connect Database - MongoDB for this project
@@ -8,6 +9,9 @@
    2. Use async
 4. Setup middlewares like cors, cookieParser, static - "public" folder, etc.
 5. Build "Utils" as required
+   - Wrapping async functions with asyncHandler provides centralized error handling for asynchronous operations across the entire application. Instead of handling errors individually in each async function, you can handle them uniformly in one place.
+   - code reusability
+   - clean, readable code
 6. Create Model Schema
    - Mongoose Midleware (Hooks) - don't use arrow function in pre hooks coz they don't have context (this and super) [Read More](https://mongoosejs.com/docs/middleware.html)
    - Pre Hook - performs an action/function just before save, update, delete, etc.
@@ -20,10 +24,12 @@
    - Setup Multer Middleware : [Multer](https://github.com/expressjs/multer) (Other package: `express-fileupload`)
 
 ## HTTP
+
 ![HTTP Methods](image-1.png)
 ![HTTP Status Code](image.png)
 
 ## Project Logic
+
 1. Routes
    - Use standard practices to write APIs, eg: `/api/v1/users`
    - Routes and App Router
