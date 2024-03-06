@@ -13,10 +13,10 @@
    - code reusability
    - clean, readable code
 6. Create Model Schema
-   - Mongoose Midleware (Hooks) - don't use arrow function in pre hooks coz they don't have context (this and super) [Read More](https://mongoosejs.com/docs/middleware.html)
+   - Mongoose Midleware (Hooks) - don't use arrow function in pre hooks coz they don't have context (this and super) [Docs](https://mongoosejs.com/docs/middleware.html)
    - Pre Hook - performs an action/function just before save, update, delete, etc.
    - Mongoose Methods - custom methods (like pre-built updateOne, deleteOne)
-   - JWT - bearer token (like a key, whoever posseses gets access) [Read More](https://github.com/auth0/node-jsonwebtoken)
+   - JWT - bearer token (like a key, whoever posseses gets access) [Docs](https://github.com/auth0/node-jsonwebtoken)
    - Access Token and Refresh Token
 7. Handling Files
    - Done using third party services - AWS, Cloudinary, etc.
@@ -38,7 +38,10 @@
    - using utils (asyncHandler, ApiError, ApiResponse, etc)
    - sending cookies
    - database operations must have `await` and wrap in try-catch
+   - mongodb operators like or, set, unset, etc...
+   - middlewares help fetch data and provides it in `req`
 3. Authentication
-   - middleware - required multiple times
-   - when accessToken expires, can fetch refreshToken from DB and regenerate accessToken without troubling user
+   - middleware - when required multiple times
+   - generateAccessAndRefreshTokens, refreshAccessToken
+      - when accessToken expires, can fetch refreshToken from DB and regenerate accessToken without troubling user
 4. Pipelines
