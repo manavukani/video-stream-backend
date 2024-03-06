@@ -366,14 +366,14 @@ const getUserChannelProfile = asyncHandler(async (req, res) => {
     {
       $addFields: {
         subscribersCount: {
-          $size: "$subscribers", // $ for field in ""
+          $size: "$subscribers", // $ for field in " "
         },
         channelsSubscribedToCount: {
           $size: "$subscribedTo",
         },
         isSubscribed: {
           $cond: {
-            if: { $in: [req.user?._id, "$subscribers.subscriber"] },
+            if: { $in: [req.user?._id, "$subscribers.subscriber"] }, // id of user in subscriber
             then: true,
             else: false,
           },
@@ -382,7 +382,7 @@ const getUserChannelProfile = asyncHandler(async (req, res) => {
     },
     {
       $project: {
-        fullName: 1,
+        fullName: 1, // boolean flags
         username: 1,
         subscribersCount: 1,
         channelsSubscribedToCount: 1,
@@ -398,11 +398,9 @@ const getUserChannelProfile = asyncHandler(async (req, res) => {
     throw new ApiError(404, "channel does not exists");
   }
 
-  return res
-    .status(200)
-    .json(
-      new ApiResponse(200, channel[0], "User channel fetched successfully")
-    );
+  return res.status(200).json(
+    new ApiResponse(200, channel[0], "User channel fetched successfully") // aggregate returns an array
+  );
 });
 
 export {
