@@ -9,7 +9,9 @@
    2. Use async
 4. Setup middlewares like cors, cookieParser, static - "public" folder, etc.
 5. Build "Utils" as required
-   - Wrapping async functions with asyncHandler provides centralized error handling for asynchronous operations across the entire application. Instead of handling errors individually in each async function, you can handle them uniformly in one place.
+   - AsyncHandler
+     - Instead of handling errors individually in each async function, you can handle them uniformly in one place.
+     - Wrapping `async` functions with `asyncHandler` provides centralized error handling for asynchronous operations
    - code reusability
    - clean, readable code
 6. Create Model Schema
@@ -43,5 +45,5 @@
 3. Authentication
    - middleware - when required multiple times
    - generateAccessAndRefreshTokens, refreshAccessToken
-      - when accessToken expires, can fetch refreshToken from DB and regenerate accessToken without troubling user
+     - when accessToken expires, can fetch refreshToken from DB and regenerate accessToken without troubling user
 4. Pipelines
