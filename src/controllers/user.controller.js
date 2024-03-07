@@ -3,6 +3,7 @@ import { ApiResponse } from "../utils/ApiResponse.js";
 import { ApiError } from "../utils/ApiError.js";
 import { User } from "../models/user.model.js";
 import { uploadOnCloudinary } from "../utils/cloudinary.js";
+import mongoose from "mongoose";
 import jwt from "jsonwebtoken";
 
 // IMP
@@ -227,11 +228,11 @@ const refreshAccessToken = asyncHandler(async (req, res) => {
 const changeCurrentPassword = asyncHandler(async (req, res) => {
   const { prevPassword, newPassword } = req.body;
 
-  // user already in req coz of "auth" middleware
-  const user = User.findById(req.user?._id);
-  const isPasswordCorrect = await user.isPasswordCorrect(prevPassword);
+  // user already in request coz of "auth" middleware
+  const user = await User.findById(req.user?._id);
+  const isPasswordValid = await user.isPasswordCorrect(prevPassword);
 
-  if (!isPasswordCorrect) {
+  if (!isPasswordValid) {
     throw new ApiError(400, "Invalid Previous Password");
   }
 
@@ -471,5 +472,5 @@ export {
   updateUserAvatar,
   updateUserCoverImage,
   getUserChannelProfile,
-  getWatchHistory
+  getWatchHistory,
 };
