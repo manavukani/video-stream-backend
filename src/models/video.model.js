@@ -39,6 +39,6 @@ const videoSchema = new Schema(
   { timestamps: true }
 );
 
-videoSchema.plugin(mongooseAggregatePaginate); // aggregate pipeline
+videoSchema.plugin(mongooseAggregatePaginate); // for aggregate paginate - from where to where
 
 export const Video = mongoose.model("Video", videoSchema);
