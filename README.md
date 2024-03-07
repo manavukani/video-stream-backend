@@ -1,6 +1,7 @@
 # Backend Workflow for Video Streaming
 
 ## Summary
+
 This project is a complex backend project that is built with nodejs, expressjs, mongodb, mongoose, jwt, bcrypt, and many more. This project is a complete backend project that has all the features that a backend project should have. We are building a complete video hosting website similar to youtube with all the features like login, signup, upload video, like, dislike, comment, reply, subscribe, unsubscribe, and many more.
 
 Project uses all standard practices like JWT, bcrypt, access tokens, refresh Tokens and many more. We have spent a lot of time in building this project and we are sure that you will learn a lot from this project.
@@ -100,3 +101,12 @@ Sample Frontend: [Click Here](https://devuiv2.vercel.app/templates/youtube)
   // so on ....
   ] )
   ```
+
+# Assignment
+
+### [Video Link](https://youtu.be/3ouqT3lfiUE?si=yx5ze6vq3uwl-qWY)
+
+### List of TO-DOs
+
+1. Mentioned in GitHub - [Click Here](https://github.com/hiteshchoudhary/chai-backend/commit/3fd289c026721da6057000e129f1f65bb146bfd1#diff-c72a907ac323cd2f334ed0e2bd07d15ab62581c4753660c8a0d1c681b30be4b6)
+2. Inside `user.controller.js` -> updateAvatar and updateCoverImage -> delete the old image 
